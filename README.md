@@ -12,15 +12,14 @@
     * Trashbin
     * Defaults app
     * Auto-launch app
+    * Configure Tiles (Meta + T)
 * Setup softwares :
     * Firefox
     * Seafile client
     * NAPS2
     * Handy
-    * Zeditor (with extensions)
 * Import configs files :
     * Import keybinds.kksrc
-    * Import Kwin Script Kzones
     * Import Ferdium config
     * Import Prusa config
     * Import OBS config
