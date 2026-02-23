@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Telmi-Sync
+Exec=appimage-run /home/heuzef/GIT/nixos-config/appimages/Telmi.Sync-*.AppImage
+Icon=/home/heuzef/GIT/nixos-config/appimages/telmi-sync.png
+Type=Application
+Categories=Education;

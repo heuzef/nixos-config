@@ -1,0 +1,23 @@
+[org.kde.kcalc.desktop][Global Shortcuts]
+_launch=Calculator; Tools
+
+[org.kde.konsole.desktop][Global Shortcuts]
+NewTab=
+NewWindow=
+_launch=Ins; Ctrl+Alt+T
+
+[Custom Commands][net.local.ferdium.desktop]
+Exec=ferdium
+Name=social
+
+[Custom Commands][net.local.firefox.desktop]
+Exec=firefox
+Name=browser
+
+[Custom Commands][net.local.kcalc.desktop]
+Exec=kcalc
+Name=calc
+
+[Custom Commands][net.local.zeditor.desktop]
+Exec=zeditor
+Name=code

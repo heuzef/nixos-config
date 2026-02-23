@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Hayase
+Exec=appimage-run /home/heuzef/GIT/nixos-config/appimages/linux-hayase-*.AppImage
+Icon=/home/heuzef/GIT/nixos-config/appimages/hayase.png
+Type=Application
+Categories=AudioVideo;

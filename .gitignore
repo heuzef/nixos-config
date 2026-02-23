@@ -1,0 +1,10 @@
+appimages/*.AppImage
+python/.venv
+python/.ipynb_checkpoints
+
+secrets/*
+!secrets/**/
+!secrets/.sops.yaml
+!secrets/*.enc*
+!secrets/*.pub
+!secrets/*.sh

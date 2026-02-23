@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Handy
+Exec=appimage-run /home/heuzef/GIT/nixos-config/appimages/Handy_*.AppImage
+Icon=/home/heuzef/GIT/nixos-config/appimages/handy.png
+Type=Application
+Categories=Utility;
