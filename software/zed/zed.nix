@@ -1,4 +1,10 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}:
 
 {
   programs.opencode.enable = true;
@@ -12,6 +18,7 @@
       "git-firefly"
       "github-actions"
       "html"
+      "latex"
       "mistral-vibe"
       "nix"
       "opencode"
