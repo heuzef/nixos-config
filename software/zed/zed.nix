@@ -34,6 +34,7 @@
         diagnostics = false;
         metrics = false;
       };
+      format_on_save = "off";
       auto_update = false;
       languages = {
         Nix = {
