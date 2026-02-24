@@ -49,6 +49,7 @@
     ghostscript
     gimp3
     google-chrome
+    hugo
     inkscape
     kdePackages.kcalc
     kdePackages.kdenlive
