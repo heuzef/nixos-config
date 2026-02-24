@@ -99,6 +99,7 @@
         { name = "vault"; hostName = "192.168.0.103"; }
         { name = "budget"; hostName = "192.168.0.104"; }
         { name = "notes"; hostName = "192.168.0.105"; }
+        { name = "claw"; hostName = "192.168.0.106"; }
         { name = "files"; hostName = "192.168.0.110"; }
         { name = "www"; hostName = "192.168.0.122"; }
         { name = "media"; hostName = "192.168.0.190"; }
