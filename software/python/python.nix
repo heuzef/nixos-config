@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -14,7 +14,7 @@
       requests
       beautifulsoup4
       python-dotenv
-      langchain-mistralai
+      # langchain-mistralai
       yt-dlp
     ]))
   ];
