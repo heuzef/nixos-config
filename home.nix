@@ -48,6 +48,7 @@
     freerdp
     ghostscript
     gimp3
+    go
     google-chrome
     hugo
     inkscape
