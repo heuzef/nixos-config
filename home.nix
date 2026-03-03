@@ -62,8 +62,6 @@
     naps2
     openscad-unstable
     prusa-slicer
-    ptouch-driver
-    ptouch-print # https://dominic.familie-radermacher.ch/projekte/ptouch-print/
     seafile-client
     signal-desktop
     superfile

@@ -110,6 +110,7 @@
     sops
     ssh-to-age
     sshfs
+    usbutils
     v4l-utils
     vim
     zsh
