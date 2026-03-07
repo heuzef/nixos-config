@@ -1,6 +1,6 @@
 #!/bin/bash
 APPIMAGES_URLS=(
-    "https://github.com/cjpais/Handy/releases/download/v0.6.9/Handy_0.7.6_amd64.AppImage" # https://handy.computer
+    "https://github.com/cjpais/Handy/releases/download/v0.7.9/Handy_0.7.9_amd64.AppImage" # https://handy.computer
     "https://api.hayase.watch/files/linux-hayase-6.4.56-linux.AppImage" # https://hayase.watch/download
     "https://github.com/DantSu/Telmi-Sync/releases/download/0.15.1/Telmi.Sync-0.15.1.AppImage" # https://telmi.fr/#download
 )
