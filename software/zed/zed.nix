@@ -23,6 +23,7 @@
       nixfmt
       opencode
     ];
+    # https://zed.dev/docs/reference/all-settings
     userSettings = {
       telemetry = {
         diagnostics = false;
@@ -37,6 +38,10 @@
             "!nil"
           ];
         };
+      };
+      minimap = {
+        show = "always";
+        thumb = "always";
       };
     };
   };
