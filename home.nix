@@ -15,7 +15,7 @@
     };
   };
 
-  # Home-Manager
+  # Home Manager
   programs.home-manager.enable = true; # Let Home Manager install and manage itself.
 
   # Home Manager needs a bit of information about you and the paths it should manage.
@@ -116,7 +116,7 @@
       map sshHostToConfig sshHosts
   );
 
-  # Edit .bashrc to use Home-Manager
+  # Edit .bashrc to use Home Manager
   home.file.".bashrc".text = ''
     if [ -f "/etc/profiles/per-user/heuzef/etc/profile.d/hm-session-vars.sh" ]; then
       source "/etc/profiles/per-user/heuzef/etc/profile.d/hm-session-vars.sh"
