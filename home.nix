@@ -1,20 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  # SOPS
-  sops = {
-    age.keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
-    defaultSopsFile = ./secrets/secrets.enc.yaml;
-    secrets = {
-      MISTRAL_API_KEY = {};
-      id_ed25519 = { path = "${config.home.homeDirectory}/.ssh/id_ed25519"; };
-      id_ed25519_pub = { path = "${config.home.homeDirectory}/.ssh/id_ed25519.pub"; };
-      data_engineering_machine_pem = {path = "${config.home.homeDirectory}/.ssh/data_engineering_machine.pem";};
-      id_rsa = { path = "${config.home.homeDirectory}/.ssh/id_rsa"; };
-      id_rsa_pub = { path = "${config.home.homeDirectory}/.ssh/id_rsa.pub"; };
-    };
-  };
-
   # Home Manager
   programs.home-manager.enable = true; # Let Home Manager install and manage itself.
 
@@ -33,6 +19,20 @@
 
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # SOPS
+  sops = {
+    age.keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
+    defaultSopsFile = ./secrets/secrets.enc.yaml;
+    secrets = {
+      MISTRAL_API_KEY = {};
+      id_ed25519 = { path = "${config.home.homeDirectory}/.ssh/id_ed25519"; };
+      id_ed25519_pub = { path = "${config.home.homeDirectory}/.ssh/id_ed25519.pub"; };
+      data_engineering_machine_pem = {path = "${config.home.homeDirectory}/.ssh/data_engineering_machine.pem";};
+      id_rsa = { path = "${config.home.homeDirectory}/.ssh/id_rsa"; };
+      id_rsa_pub = { path = "${config.home.homeDirectory}/.ssh/id_rsa.pub"; };
+    };
+  };
 
   # The home.packages option allows you to install Nix packages into your environment.
   home.packages = with pkgs; [
