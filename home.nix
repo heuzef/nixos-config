@@ -56,6 +56,7 @@
     kdePackages.kcalc
     kdePackages.kdenlive
     kdePackages.kglobalaccel
+    lastversion
     libreoffice-fresh
     librewolf
     mpv
