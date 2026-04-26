@@ -99,6 +99,7 @@
         { name = "budget"; hostName = "192.168.0.104"; }
         { name = "notes"; hostName = "192.168.0.105"; }
         { name = "claw"; hostName = "192.168.0.106"; extraConfig = "LocalForward 18789 127.0.0.1:18789"; }
+        { name = "thunderbolt"; hostName = "192.168.0.107"; }
         { name = "files"; hostName = "192.168.0.110"; }
         { name = "www"; hostName = "192.168.0.122"; }
         { name = "media"; hostName = "192.168.0.190"; }
