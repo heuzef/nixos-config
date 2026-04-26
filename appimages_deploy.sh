@@ -1,22 +1,55 @@
 #!/bin/bash
-APPIMAGES_URLS=(
-    "https://github.com/cjpais/Handy/releases/download/v0.8.2/Handy_0.8.2_amd64.AppImage" # https://handy.computer
-    "https://api.hayase.watch/files/linux-hayase-6.4.60-linux.AppImage" # https://hayase.watch/download
-    "https://github.com/DantSu/Telmi-Sync/releases/download/0.17.0/Telmi.Sync-0.17.0.AppImage" # https://telmi.fr/#download
+# Requirements : wget, lastversion
+# Configuration
+APPIMAGE_DIR="appimages"
+mkdir -p "$APPIMAGE_DIR"
+
+# Specific versions variables
+HAYASE_VERSION="6.4.60"
+
+# Applications (Key = Local filename | Value = GitHub repo or direct URL)
+declare -A APPS
+APPS=(
+    ["telmi-Sync"]="DantSu/Telmi-Sync" # https://telmi.fr/#download
+    ["hayase"]="https://api.hayase.watch/files/linux-hayase-${HAYASE_VERSION}-linux.AppImage" # https://hayase.watch/download
 )
 
-cd appimages/
-mkdir -p ~/.local/share/applications/
-rm -vf ./*.AppImage
+echo "Starting Update Process"
 
-for url in "${APPIMAGES_URLS[@]}"; do
-    echo "Download : $url"
-    wget -c -P "./" "$url"
+# Clean up old AppImage files to prevent conflicts
+rm -f "$APPIMAGE_DIR"/*.AppImage
+
+for APP_NAME in "${!APPS[@]}"; do
+    SOURCE="${APPS[$APP_NAME]}"
+
+    echo "--------------------"
+    echo "Processing: $APP_NAME..."
+
+    # Check if the source is a direct URL or a GitHub repo
+    if [[ $SOURCE == http* ]]; then
+        # Direct URL (using the version variable defined above)
+        URL=$SOURCE
+    else
+        # Use lastversion for GitHub repositories
+        echo "Fetching latest release for $SOURCE..."
+        # We filter for 'AppImage' assets specifically
+        URL=$(lastversion get "$SOURCE" --assets --filter "AppImage")
+    fi
+
+    if [ -n "$URL" ]; then
+        echo "Downloading: $URL"
+        wget -c -P "$APPIMAGE_DIR/" "$URL"
+    else
+        echo "Error: Could not find AppImage URL for $APP_NAME"
+    fi
 done
 
-sudo chmod +x -R .
-cp -v ./*.desktop ~/.local/share/applications/
+# Set executable permissions
+chmod +x -R "$APPIMAGE_DIR"/*
 
-# Todo : improve this script with lastversion
-# Eg : lastversion https://github.com/DantSu/telmi-sync ; lastversion https://github.com/cjpais/Handy
-# https://lastversion.getpagespeed.com/
+# Copy .desktop files
+cp -v "$APPIMAGE_DIR"/*.desktop ~/.local/share/applications/
+
+echo "--------------------"
+echo "Update Completed!"
+ls -larth "$APPIMAGE_DIR"/
