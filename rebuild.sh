@@ -9,11 +9,13 @@ if [[ "$1" == "fast" || "$1" == "f" ]]; then
     sudo nixos-rebuild switch --flake "$REPO_PATH#$(hostname)"
 
 else
-    echo "Rebuild system ..."
+    echo "Rebuild and clean system ..."
     nix flake update
-    sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +5
-    nix-collect-garbage --delete-older-than 15d
+    sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +3
     sudo nixos-rebuild switch --flake "$REPO_PATH#$(hostname)"
+    nix-collect-garbage --delete-older-than 7d
+    nix-store --gc
+    sudo journalctl --vacuum-size=100M
 fi
 
 nixos-rebuild list-generations
