@@ -61,6 +61,7 @@
     librewolf
     mpv
     naps2
+    ollama-rocm
     openscad-unstable
     prusa-slicer
     seafile-client
