@@ -5,7 +5,7 @@ APPIMAGE_DIR="appimages"
 mkdir -p "$APPIMAGE_DIR"
 
 # Specific versions variables
-HAYASE_VERSION="6.4.69"
+HAYASE_VERSION="6.4.74"
 
 # Applications (Key = Local filename | Value = GitHub repo or direct URL)
 declare -A APPS
