@@ -42,6 +42,7 @@
     bat
     btop
     bws
+    deluge
     dig
     eza
     ferdium
