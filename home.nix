@@ -41,7 +41,6 @@
     audacity
     bat
     btop
-    bws
     deluge
     dig
     eza
