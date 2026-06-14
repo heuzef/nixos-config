@@ -1,13 +1,16 @@
 # Heuzef Nixos-Config
 
 ## INIT
-* Set Hostname : ``sudo nano /etc/nixos/configuration.nix``, set networking.hostName and ``sudo nixos-rebuild boot ; reboot``
-* Install AGE private key for SOPS in : ``~/.config/sops/age/keys.txt``
-* Clone GIT repo : ``mkdir ~/GIT ; cd ~/GIT ; nix-shell -p git --command "git clone https://github.com/heuzef/nixos-config.git" ; cd nixos-config``
-* Process install : ``sh ~/GIT/nixos-config/rebuild.sh fast``
+* Change configuration : ``sudo nano /etc/nixos/configuration.nix`` :
+   * set networking.hostName
+   * set necessary packages : ``git, age, sops``
+   * Install AGE private key for SOPS in : ``~/.config/sops/age/keys.txt``
+   * rebuild and reboot : ``sudo nixos-rebuild boot ; reboot``
+* Clone GIT repo : ``mkdir ~/GIT ; cd ~/GIT ; git clone https://github.com/heuzef/nixos-config.git ; cd nixos-config``
+* Process install and reboot : ``sh ~/GIT/nixos-config/rebuild.sh``
 * Re-clone GIT repo with SSH key : ``cd ~/GIT/ ; rm -fr nixos-config/ ; git clone git@github.com:heuzef/nixos-config.git``
 * Deploy AppImages : ``sh ~/GIT/nixos-config/appimages_deploy.sh``
-* Sync fonts : ``mkdir ~/.local/share/fonts/ ; ln -s ~/GIT/nixos-config/fonts/* ~/.local/share/fonts/``
+* Sync fonts : ``mkdir -p ~/.local/share/fonts/ ; ln -s ~/GIT/nixos-config/fonts/* ~/.local/share/fonts/``
 * Apply manual configuration (check mynixos.com to improve later) :
     * Check Audio
     * Configure Tiles (Meta + T)
