@@ -9,7 +9,7 @@
 * Apply manual configuration (check mynixos.com to improve later) :
     * Check Audio
     * Configure Tiles (Meta + T)
-    * Keyboard (model and numlock)
+    * Keyboard (model, numlock, Layout)
     * Disable Lock screen delay
     * Disable power management
     * Config Trashbin
