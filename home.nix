@@ -22,7 +22,7 @@
 
   # SOPS
   sops = {
-    age.keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
+    age.keyFile = "/etc/sops/age/keys.txt";
     defaultSopsFile = ./secrets/secrets.enc.yaml;
     secrets = {
       MISTRAL_API_KEY = {};
