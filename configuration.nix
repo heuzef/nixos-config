@@ -65,7 +65,7 @@
   console.keyMap = "fr";
 
   # KWallet
-  security.pam.services.login.kwallet.enable = true;
+  # security.pam.services.login.kwallet.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
