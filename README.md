@@ -8,7 +8,7 @@
    * rebuild and reboot : ``sudo nixos-rebuild boot ; reboot``
 * Clone GIT repo : ``mkdir ~/GIT ; cd ~/GIT ; git clone https://github.com/heuzef/nixos-config.git ; cd nixos-config``
 * Process install and reboot : ``sh ~/GIT/nixos-config/rebuild.sh ; reboot``
-* Re-clone GIT repo with SSH key : ``cd ~/GIT/ ; rm -fr nixos-config/ ; git clone git@github.com:heuzef/nixos-config.git``
+* Update GIT repo url : ``cd ~/GIT/nixos-config/ ; git remote set-url origin git@github.com:heuzef/nixos-config.git``
 * Deploy AppImages : ``sh ~/GIT/nixos-config/appimages_deploy.sh``
 * Sync fonts : ``mkdir -p ~/.local/share/fonts/ ; ln -s ~/GIT/nixos-config/fonts/* ~/.local/share/fonts/``
 * Apply manual configuration (check mynixos.com to improve later) :
