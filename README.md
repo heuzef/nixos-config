@@ -4,7 +4,7 @@
 * Change configuration : ``sudo nano /etc/nixos/configuration.nix`` :
    * set networking.hostName
    * set necessary packages : ``git, age, sops``
-   * Install AGE private key for SOPS in : ``/etc/sops/age/keys.txt`` with permissions : ``sudo chmod -R 755 /etc/sops/`` and link ``ln -s /etc/sops/ /home/heuzef/.config/``
+   * Install AGE private key for SOPS in : ``~/.config/sops/age/keys.txt`` with permissions : ``chmod -R 600 ~/.config/sops/``
    * rebuild and reboot : ``sudo nixos-rebuild boot ; reboot``
 * Clone GIT repo : ``mkdir ~/GIT ; cd ~/GIT ; git clone https://github.com/heuzef/nixos-config.git ; cd nixos-config``
 * Process install and reboot : ``sh ~/GIT/nixos-config/rebuild.sh ; reboot``
