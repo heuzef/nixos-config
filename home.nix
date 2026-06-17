@@ -61,6 +61,7 @@
     librewolf
     mpv
     naps2
+    omnissa-horizon-client
     openscad-unstable
     prusa-slicer
     seafile-client
