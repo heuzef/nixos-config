@@ -66,7 +66,6 @@
     seafile-client
     signal-desktop
     superfile
-    tor-browser
     tree
     vim
     vlc
