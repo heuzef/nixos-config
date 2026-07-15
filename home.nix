@@ -41,6 +41,7 @@
     audacity
     bat
     btop
+    claude-code
     deluge
     dig
     eza
