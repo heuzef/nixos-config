@@ -62,7 +62,6 @@
     librewolf
     mpv
     naps2
-    openscad-unstable
     prusa-slicer
     seafile-client
     signal-desktop
