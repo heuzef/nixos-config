@@ -142,6 +142,7 @@
       tree = "eza --icons -la --no-permissions --no-filesize --no-user --no-time -T -L2";
       cat = "bat";
       spf = "superfile";
+      media = "sshfs root@media:/mnt/DATA_MEDIA/ /home/heuzef/DATA_MEDIA/";
     };
 
     # Oh My Zsh
