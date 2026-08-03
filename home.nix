@@ -42,7 +42,6 @@
     bat
     btop
     claude-code
-    deluge
     dig
     eza
     ferdium
@@ -63,6 +62,7 @@
     mpv
     naps2
     prusa-slicer
+    qbittorrent
     seafile-client
     signal-desktop
     superfile
