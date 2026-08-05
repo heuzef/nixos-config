@@ -101,6 +101,18 @@
         { name = "files"; hostName = "192.168.0.110"; }
         { name = "www"; hostName = "192.168.0.122"; }
         { name = "media"; hostName = "192.168.0.190"; }
+
+        # Azure DevOps
+        {
+          name = "ssh.dev.azure.com";
+          hostName = "ssh.dev.azure.com";
+          user = "git";
+          identityFile = "~/.ssh/heuzef_azuredevops_id_rsa";
+          extraConfig = ''
+            PubkeyAcceptedKeyTypes +ssh-rsa
+            HostkeyAlgorithms +ssh-rsa
+          '';
+        }
       ];
 
       sshHostToConfig = host: ''
