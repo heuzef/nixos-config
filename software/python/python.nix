@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     (python3.withPackages (ps: with ps; [
+      uv
       jupyter
       ipykernel
       notebook
