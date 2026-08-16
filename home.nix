@@ -46,6 +46,7 @@
     eza
     ferdium
     ffmpeg
+    freecad
     freerdp
     ghostscript
     gimp3
