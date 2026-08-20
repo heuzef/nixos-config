@@ -39,6 +39,7 @@
     apostrophe
     appimage-run
     audacity
+    azure-cli
     bat
     btop
     claude-code
