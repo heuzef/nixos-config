@@ -63,6 +63,7 @@
     librewolf
     mpv
     naps2
+    nodejs_22
     prusa-slicer
     qbittorrent
     seafile-client
