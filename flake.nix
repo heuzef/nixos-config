@@ -26,6 +26,7 @@
         # pgmr
         pgmr = lib.nixosSystem {
           inherit system;
+          # Systems modules
           modules = [
             ./configuration.nix
             ./software/docker/docker.nix
@@ -35,17 +36,18 @@
             # ./software/vscodium/vscodium.nix
             ./hardware/pgmr.nix
             ./hardware/printers.nix
-            home-manager.nixosModules.home-manager {
+            # Home-Manager modules
+            home-manager.nixosModules.home-manager
+            {
               networking.hostName = "pgmr";
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.sharedModules = [ inputs.sops-nix.homeManagerModules.sops ];
-              home-manager.users.heuzef = {
-                imports = [
-                  ./home.nix
-                  ./software/zed/zed.nix
-                ];
-              };
+              home-manager.users.heuzef.imports = [
+                ./home.nix
+                ./software/zed/zed.nix
+                ./software/anthropic/claude.nix
+              ];
             }
           ];
         };
@@ -53,11 +55,13 @@
         # x240
         x240 = lib.nixosSystem {
           inherit system;
+          # Systems modules
           modules = [
             ./configuration.nix
             ./software/python/python.nix
             ./hardware/x240.nix # sudo nixos-generate-config --show-hardware-config
             ./hardware/printers.nix # https://nixos.wiki/wiki/Printing
+            # Home-Manager modules
             home-manager.nixosModules.home-manager
             {
               networking.hostName = "x240";
@@ -72,11 +76,13 @@
         # latitude3380
         latitude3380 = lib.nixosSystem {
           inherit system;
+          # Systems modules
           modules = [
             ./configuration.nix
             ./software/python/python.nix
             ./hardware/latitude3380.nix # sudo nixos-generate-config --show-hardware-config
             ./hardware/printers.nix # https://nixos.wiki/wiki/Printing
+            # Home-Manager modules
             home-manager.nixosModules.home-manager
             {
               networking.hostName = "latitude3380";

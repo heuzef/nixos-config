@@ -45,7 +45,6 @@
     azure-cli
     bat
     btop
-    claude-code
     dig
     eza
     ferdium
