@@ -148,6 +148,9 @@
     history.ignoreAllDups = true;
     initContent = ''
       export MISTRAL_API_KEY=$(cat ${config.sops.secrets.MISTRAL_API_KEY.path})
+      export CLAUDE_API_KEY=$(cat ${config.sops.secrets.CLAUDE_API_KEY.path})
+      export MINDWTR_MCP_CLOUD_URL=${config.sops.secrets.MINDWTR_MCP_CLOUD_URL.path}
+      export MINDWTR_MCP_CLOUD_TOKEN=$(cat ${config.sops.secrets.MINDWTR_MCP_CLOUD_TOKEN.path})
     '';
 
     # Alias
