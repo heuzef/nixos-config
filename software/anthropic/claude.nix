@@ -5,18 +5,13 @@ let
   # through `programs.claude-code.context` below, so ~/AGENT.md and ~/.claude/CLAUDE.md never drift apart.
   agentContext = ''
     # Agent instructions
-
-    ## Environment
-
-    - NixOS with flakes, Home Manager and sops-nix.
-    - The system configuration lives in ~/GIT/nixos-config.
-    - The shell is zsh. Files under /nix/store are read-only, never edit them.
-
-    ## Conventions
-
-    - Change the system by editing the configuration and rebuilding with ./rebuild.sh, never imperatively.
-    - Secrets belong in secrets/secrets.enc.yaml, encrypted with SOPS. Never write a plaintext secret
-      into a Nix file, it would land in the store.
+    - Projects live in ~/GIT.
+    - Environment is NixOS with flakes, Home Manager and sops-nix.
+    - The system configuration lives in ~/GIT/nixos-config with secrets encrypted with SOPS.
+    - Never write a plaintext secret into a Nix file.
+    - The shell is zsh.
+    - Avoid to change the system by editing read-only files under /nix/store.
+    - Change the system by editing the configuration, never imperatively.
     - Comments and commit messages are written in English.
   '';
 in
@@ -27,13 +22,13 @@ in
   # Shared MCP connectors
   # https://home-manager-options.extranix.com/?query=programs.mcp
   #
-  # Secrets never reach the store: only the path of the SOPS-decrypted file does. 
-  # Home Manager generates a wrapper script that reads that file when the server starts, 
+  # Secrets never reach the store: only the path of the SOPS-decrypted file does.
+  # Home Manager generates a wrapper script that reads that file when the server starts,
   # so this does not depend on shell exports (the MCP server is spawned by Claude Code, not by zsh).
   programs.mcp = {
     enable = true;
     servers = {
-      # Declarative equivalent of: 
+      # Declarative equivalent of:
       # claude mcp add mindwtr -s user --env MINDWTR_MCP_CLOUD_URL=... --env MINDWTR_MCP_CLOUD_TOKEN=... -- npx -y mindwtr-mcp --write
       mindwtr = {
         command = "${pkgs.nodejs_22}/bin/npx";
@@ -54,7 +49,7 @@ in
   #   ~/.claude/CLAUDE.md
   #   ~/.claude/skills/claude-code-home-manager/.mcp.json  (MCP connectors)
   #
-  # NOTE: those files become read-only symlinks into the store. 
+  # NOTE: those files become read-only symlinks into the store.
   # They can no longer be edited through /config or `claude mcp add`, everything goes through this file from now on.
   programs.claude-code = {
     enable = true;
