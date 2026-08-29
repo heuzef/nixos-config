@@ -32,7 +32,7 @@
             ./software/obs/obs.nix
             ./software/python/python.nix
             ./software/steam/steam.nix
-            ./software/vscodium/vscodium.nix
+            # ./software/vscodium/vscodium.nix
             ./hardware/pgmr.nix
             ./hardware/printers.nix
             home-manager.nixosModules.home-manager {
