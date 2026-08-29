@@ -26,6 +26,9 @@
     defaultSopsFile = ./secrets/secrets.enc.yaml;
     secrets = {
       MISTRAL_API_KEY = {};
+      CLAUDE_API_KEY = {};
+      MINDWTR_MCP_CLOUD_URL = {};
+      MINDWTR_MCP_CLOUD_TOKEN = {};
       id_ed25519 = { path = "${config.home.homeDirectory}/.ssh/id_ed25519"; };
       id_ed25519_pub = { path = "${config.home.homeDirectory}/.ssh/id_ed25519.pub"; };
       data_engineering_machine_pem = {path = "${config.home.homeDirectory}/.ssh/data_engineering_machine.pem";};
