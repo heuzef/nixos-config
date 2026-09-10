@@ -7,7 +7,7 @@
 {
 
   # Enable experimental-features
-  nix.settings.experimental-features = "nix-command flakes";
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Increasing the 'download-buffer-size' setting
   nix.settings.download-buffer-size = 524288000;
 
