@@ -61,7 +61,7 @@
     kdePackages.kdenlive
     kdePackages.kglobalaccel
     lastversion
-    libreoffice-fresh
+    libreoffice-stable
     librewolf
     mpv
     naps2
