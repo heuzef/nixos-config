@@ -95,19 +95,12 @@
         identityFile = "~/.ssh/id_ed25519";
       };
 
-      sshHosts = [
-        { name = "pve"; hostName = "192.168.0.100"; }
-        { name = "proxy"; hostName = "192.168.0.101"; }
-        { name = "backup"; hostName = "192.168.0.102"; }
-        { name = "vault"; hostName = "192.168.0.103"; }
-        { name = "budget"; hostName = "192.168.0.104"; }
-        { name = "notes"; hostName = "192.168.0.105"; }
-        { name = "ai"; hostName = "192.168.0.106"; }
-        { name = "workflow"; hostName = "192.168.0.107"; }
-        { name = "files"; hostName = "192.168.0.110"; }
-        { name = "www"; hostName = "192.168.0.122"; }
-        { name = "media"; hostName = "192.168.0.190"; }
+      # Homelab hosts, from the shared inventory
+      lanHosts = lib.mapAttrsToList
+        (name: hostName: { inherit name hostName; })
+        (import ./network/hosts.nix);
 
+      sshHosts = lanHosts ++ [
         # Azure DevOps
         {
           name = "ssh.dev.azure.com";
