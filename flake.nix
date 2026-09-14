@@ -29,6 +29,8 @@
           # Systems modules
           modules = [
             ./configuration.nix
+            # ./network/vpn.nix
+            # ./network/wifi.nix
             ./software/docker/docker.nix
             ./software/obs/obs.nix
             ./software/python/python.nix
@@ -58,6 +60,8 @@
           # Systems modules
           modules = [
             ./configuration.nix
+            # ./network/vpn.nix
+            # ./network/wifi.nix
             ./software/python/python.nix
             ./hardware/x240.nix # sudo nixos-generate-config --show-hardware-config
             ./hardware/printers.nix # https://nixos.wiki/wiki/Printing
@@ -79,6 +83,8 @@
           # Systems modules
           modules = [
             ./configuration.nix
+            # ./network/vpn.nix
+            # ./network/wifi.nix
             ./software/python/python.nix
             ./hardware/latitude3380.nix # sudo nixos-generate-config --show-hardware-config
             ./hardware/printers.nix # https://nixos.wiki/wiki/Printing
