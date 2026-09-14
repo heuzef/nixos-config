@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   # Machine-wide instructions shared by every coding agent. Declared once here and handed to Claude Code
