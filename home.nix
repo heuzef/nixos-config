@@ -49,7 +49,7 @@
     eza
     ferdium
     ffmpeg
-    freecad
+    # freecad -> https://github.com/NixOS/nixpkgs/issues/562782
     freerdp
     ghostscript
     gimp3
