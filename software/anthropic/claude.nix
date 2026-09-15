@@ -36,9 +36,6 @@ in
           MINDWTR_MCP_CLOUD_TOKEN.file = config.sops.secrets.MINDWTR_MCP_CLOUD_TOKEN.path;
         };
       };
-
-      # Declarative equivalent of:
-      # claude mcp add --transport http n8n -s user https://workflow.heuzef.com/mcp-server/http
       n8n = {
         type = "http";
         url = "https://workflow.heuzef.com/mcp-server/http";
