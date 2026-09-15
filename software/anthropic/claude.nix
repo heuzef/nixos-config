@@ -28,8 +28,6 @@ in
   programs.mcp = {
     enable = true;
     servers = {
-      # Declarative equivalent of:
-      # claude mcp add mindwtr -s user --env MINDWTR_MCP_CLOUD_URL=... --env MINDWTR_MCP_CLOUD_TOKEN=... -- npx -y mindwtr-mcp --write
       mindwtr = {
         command = "${pkgs.nodejs_22}/bin/npx";
         args = [ "-y" "mindwtr-mcp" "--write" ];
@@ -37,6 +35,13 @@ in
           MINDWTR_MCP_CLOUD_URL.file = config.sops.secrets.MINDWTR_MCP_CLOUD_URL.path;
           MINDWTR_MCP_CLOUD_TOKEN.file = config.sops.secrets.MINDWTR_MCP_CLOUD_TOKEN.path;
         };
+      };
+
+      # Declarative equivalent of:
+      # claude mcp add --transport http n8n -s user https://workflow.heuzef.com/mcp-server/http
+      n8n = {
+        type = "http";
+        url = "https://workflow.heuzef.com/mcp-server/http";
       };
     };
   };
