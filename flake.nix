@@ -31,6 +31,7 @@
             ./configuration.nix
             # ./network/vpn.nix
             # ./network/wifi.nix
+            ./network/bluetooth.nix
             ./software/docker/docker.nix
             ./software/obs/obs.nix
             ./software/python/python.nix
@@ -62,6 +63,7 @@
             ./configuration.nix
             # ./network/vpn.nix
             # ./network/wifi.nix
+            # ./network/bluetooth.nix
             ./software/python/python.nix
             ./hardware/x240.nix # sudo nixos-generate-config --show-hardware-config
             ./hardware/printers.nix # https://nixos.wiki/wiki/Printing
@@ -85,6 +87,7 @@
             ./configuration.nix
             # ./network/vpn.nix
             # ./network/wifi.nix
+            # ./network/bluetooth.nix
             ./software/python/python.nix
             ./hardware/latitude3380.nix # sudo nixos-generate-config --show-hardware-config
             ./hardware/printers.nix # https://nixos.wiki/wiki/Printing
