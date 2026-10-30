@@ -42,7 +42,7 @@
     apostrophe
     appimage-run
     audacity
-    azure-cli
+    # azure-cli -> https://github.com/NixOS/nixpkgs/issues/575989
     bat
     btop
     dig
