@@ -71,6 +71,8 @@ in
       agentPushNotifEnabled = true;
       skipDangerousModePermissionPrompt = true;
       includeCoAuthoredBy = false;
+      voiceEnabled = true;
+      permissions.defaultMode = "auto";
     };
   };
 }
