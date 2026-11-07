@@ -122,6 +122,9 @@
      kdePackages.elisa
   ];
 
+  # Disable KDE PIM suite enabled by Plasma (Akonadi, KMail, Kontact, Merkuro, KTnef, import wizard)
+  programs.kde-pim.enable = false;
+
   # Some programs need SUID wrappers, can be configured further or are started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
