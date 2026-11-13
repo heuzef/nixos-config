@@ -73,6 +73,27 @@ in
       includeCoAuthoredBy = false;
       voiceEnabled = true;
       permissions.defaultMode = "auto";
+
+      # Synced from claude.ai but unused in the CLI: keep them out of the session context.
+      enabledPlugins = {
+        "data@synced" = false;
+        "cowork-plugin-management@synced" = false;
+      };
+      skillOverrides = {
+        "anthropic-skills:docx" = "off";
+        "anthropic-skills:pdf" = "off";
+        "anthropic-skills:pptx" = "off";
+        "anthropic-skills:xlsx" = "off";
+        "anthropic-skills:docs" = "off";
+        "anthropic-skills:deep-research" = "off";
+        "anthropic-skills:morning" = "off";
+        "anthropic-skills:computer-use" = "off";
+        "anthropic-skills:chrome-browser" = "off";
+        "anthropic-skills:built-in-browser" = "off";
+        "anthropic-skills:google-workspace" = "off";
+        "anthropic-skills:import-memory" = "off";
+        "anthropic-skills:skill-creator" = "off";
+      };
     };
   };
 }
