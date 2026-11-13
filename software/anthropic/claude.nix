@@ -66,7 +66,7 @@ in
     # ~/.claude/settings.json
     settings = {
       model = "opus";
-      effortLevel = "high";
+      env.CLAUDE_CODE_EFFORT_LEVEL = "high";
       theme = "auto";
       agentPushNotifEnabled = true;
       skipDangerousModePermissionPrompt = true;
