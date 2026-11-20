@@ -88,6 +88,7 @@
             # ./network/vpn.nix
             # ./network/wifi.nix
             # ./network/bluetooth.nix
+            ./software/docker/docker.nix
             ./software/python/python.nix
             ./hardware/latitude3380.nix # sudo nixos-generate-config --show-hardware-config
             ./hardware/printers.nix # https://nixos.wiki/wiki/Printing
@@ -98,7 +99,11 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.sharedModules = [ inputs.sops-nix.homeManagerModules.sops ];
-              home-manager.users.heuzef = import ./home.nix;
+              home-manager.users.heuzef.imports = [
+                ./home.nix
+                ./software/zed/zed.nix
+                ./software/anthropic/claude.nix
+              ];
             }
           ];
         };
